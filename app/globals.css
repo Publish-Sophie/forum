@@ -39,7 +39,7 @@ input {
   margin-bottom: 10px;
 }
 button {
-  padding: 10px 15px;
+  padding: 10px 8px;
   background: lightgray;
   border: none;
   border-radius: 5px;
@@ -60,4 +60,11 @@ button {
 
 #id {
   display: none;
+}
+.btn {
+  padding: 12px;
+  margin: 0 8px;
+  background-color: transparent;
+  font-size: 2em;
+  cursor: pointer;
 }
