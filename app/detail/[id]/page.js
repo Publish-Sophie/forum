@@ -10,7 +10,7 @@ export default async function Detail(props) {
   });
 
   return (
-    <div>
+    <div className="p-20">
       <h2>상세페이지임</h2>
       <h4>{result.title}</h4>
       <p>{result.content}</p>

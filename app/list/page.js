@@ -15,7 +15,7 @@ export default async function List() {
               {title}
             </Link>
           </h4>
-          <DetailLink id={_id.toString()} />
+          <Link href={`/edit/${_id}`}>🖍</Link>
           <p>1월 1일</p>
         </div>
       ))}
