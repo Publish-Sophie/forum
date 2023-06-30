@@ -16,17 +16,17 @@ export default function ListItem({ result }) {
           <Link className="btn" href={`/edit/${_id}`}>
             ✏
           </Link>
-          <span
+          <button
             className="btn"
             onClick={() => {
               fetch("/api/post/delete", {
-                method: "DELETE",
+                method: "POST",
                 body: _id,
               });
             }}
           >
             🗑
-          </span>
+          </button>
           <p>1월 1일</p>
         </div>
       ))}
