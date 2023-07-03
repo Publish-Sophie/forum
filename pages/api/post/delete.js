@@ -4,10 +4,13 @@ import { ObjectId } from "mongodb";
 import { connectDB } from "@/util/database";
 
 export default async function handler(req, res) {
+  const { id } = req?.query;
+  // console.log(req.query?.id);
+
   if (req.method == "POST") {
     let db = (await connectDB).db("forum");
     await db.collection("post").deleteOne({
-      _id: new ObjectId(req.body),
+      _id: new ObjectId(id),
     });
     res.status(200).json("삭제완료");
   }
