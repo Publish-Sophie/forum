@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
-import LoginBtn from "./LoingBtn";
+import LoginBtn from "./LoginBtn";
+import LogOutBtn from "./LogoutBtn";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
@@ -12,7 +13,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   let session = await getServerSession(authOptions);
 
-  console.log(session);
+  // console.log(session);
 
   return (
     <html lang="en">
@@ -23,7 +24,13 @@ export default async function RootLayout({ children }) {
           </Link>
           <Link href="/list">List</Link>
           <Link href="/write">Write</Link>
-          <LoginBtn />
+          {session ? (
+            <span>
+              {session.user.name} <LogOutBtn />{" "}
+            </span>
+          ) : (
+            <LoginBtn></LoginBtn>
+          )}
         </div>
         {children}
       </body>
