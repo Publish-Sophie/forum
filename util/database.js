@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 require("dotenv").config();
 const { REACT_APP_API_PW } = process.env;
-const url = `mongodb+srv://admin:${REACT_APP_API_PW}@cluster0.x5k5nmj.mongodb.net/?retryWrites=true&w=majority`;
+const url = `mongodb+srv://admin:${REACT_APP_API_PW}@cluster0.x5k5nmj.mongodb.net/forum?retryWrites=true&w=majority`;
 const options = { useNewUrlParser: true };
 let connectDB;
 
