@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
+import LoginBtn from "./LoingBtn";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
           </Link>
           <Link href="/list">List</Link>
           <Link href="/write">Write</Link>
+          <LoginBtn />
         </div>
         {children}
       </body>
